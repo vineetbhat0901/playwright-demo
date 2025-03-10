@@ -1,6 +1,6 @@
 import BasePageFunctions from "../BasePageFunctions";
 import SearchComponentLocators from "./SearchComponentLocators";
-
+import testData from '../../testData/testData.json'
 
 class SearchComponentFunctions extends BasePageFunctions{
     constructor(page) {
@@ -9,7 +9,7 @@ class SearchComponentFunctions extends BasePageFunctions{
     }
 
     async enterProfile() {
-        await this.searchComponentLocators.searchField.fill('vineetbhat__');
+        await this.searchComponentLocators.searchField.fill(testData.recipientProfile);
     }
 
     async clickOnProfileLink() {
